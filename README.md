@@ -54,7 +54,7 @@ Ifeoluwa Sanni
 
 ## Loom(video) walkthrough
 ```bash
-https://www.loom.com/share/2f2e3a9728174afcb05f5ae785a85cf4?sid=815bd605-9b4e-49b4-bfdf-d0354fd72579
+https://www.loom.com/share/52f16ec14cac407c850ab25940c56523?sid=b90a958e-1c56-4072-8291-c15d825472c6
 ```
 ## License
 
