@@ -19,7 +19,7 @@ contract FunctionsAndErrorsProject {
         assert(_myAmount == amount);
     }
 
-    function revertError(uint256 _myAge) public view {
+    function revertError(uint256 _myAmount) public view {
         if (_myAmount != amount) {
             revert("_myAmount must not exceed 2000");
         }
