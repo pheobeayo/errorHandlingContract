@@ -3,23 +3,25 @@
 pragma solidity ^0.8.17;
 
 contract FunctionsAndErrorsProject {
-    uint256 public age = 45;
-    uint256 public ageLimit = 20;
 
-    function requireError(uint256 _myAge) public view {
+    uint256 public amount = 2000;
+    uint256 public amountLimit = 100;
+
+
+    function requireError(uint256 _myAmount) public view {
         require(
-            ageLimit <= _myAge,
-            "You are below the age limit! You must be 20!"
+            amountLimit <= _myAmount,
+            "You are below the amount limit! add up!"
         );
     }
 
-    function assertError(uint256 _myAge) public view {
-        assert(_myAge == age);
+    function assertError(uint256 _myAmount) public view {
+        assert(_myAmount == amount);
     }
 
     function revertError(uint256 _myAge) public view {
-        if (_myAge != age) {
-            revert("_myAge must be 45");
+        if (_myAmount != amount) {
+            revert("_myAmount must not exceed 2000");
         }
     }
 }
