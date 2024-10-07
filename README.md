@@ -15,31 +15,49 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FunctionsAndErrorsProject.sol). Copy and paste the following code into the file:
 
 ```javascript
-pragma solidity ^0.8.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-contract FunctionsAndErrorsProject {
+contract ErrorFunctionsContract {
+    address public owner;
+    uint public balance;
 
-    uint256 public amount = 2000;
-    uint256 public amountLimit = 100;
-
-
-    function requireError(uint256 _myAmount) public view {
-        require(
-            amountLimit <= _myAmount,
-            "You are below the amount limit! add up!"
-        );
+    constructor() {
+        owner = msg.sender;  // Set the deployer as the owner
     }
 
-    function assertError(uint256 _myAmount) public view {
-        assert(_myAmount == amount);
+    // Function to deposit ether into the contract
+    function deposit() public payable {
+        require(msg.value > 0, "Deposit must be greater than zero"); // Using require to check input
+        balance += msg.value;
     }
 
-    function revertError(uint256 _myAmount) public view {
-        if (_myAmount != amount) {
-            revert("_myAmount must not exceed 2000");
+    // Function to withdraw ether, only owner can withdraw
+    function withdraw(uint _amount) public {
+        require(msg.sender == owner, "Only the owner can withdraw"); // Using require to ensure only owner can withdraw
+        if (_amount > balance) {
+            revert("Insufficient contract balance"); // Using revert to handle insufficient balance
         }
+
+        payable(owner).transfer(_amount);
+        balance -= _amount;
+
+        // Using assert to check that the balance never goes negative
+        assert(balance >= 0);
+    }
+
+    // Function to change the owner of the contract
+    function changeOwner(address _newOwner) public {
+        require(msg.sender == owner, "Only the owner can change the ownership"); // Using require to validate ownership
+        owner = _newOwner;
+    }
+
+    // Get function for the contract's balance
+    function getBalance() public view returns (uint) {
+        return balance;
     }
 }
+
 
 ```
 
