@@ -1,20 +1,3 @@
-# FunctionsAndErrorsProject
-
-This Solidity implements the require(), assert() and revert() statements..
-
-## Description
-
-This program is a simple contract written in Solidity. The contract has 3 function that returns that implements the require(), assert() and revert() statements.
-
-## Getting Started
-
-### Executing program
-
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
-
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., Errorhandling.sol). Copy and paste the following code into the file:
-
-```javascript
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -79,28 +62,6 @@ contract ErrorHandling {
         balance = 0;
     }
 
-    // Fallback function to accept Ether
-    receive() external payable {
-        deposit();
-    }
+   
+    
 }
-
-
-```
-
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0" (or another compatible version), and then click on the "Errorhandling.sol" button.
-
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Errorstatement" contract from the dropdown menu, and then click on the "Deploy" button.
-
-Once the contract is deployed, you can interact with it by calling the requireError function or assertError function or revertError function, passing in their respective arguements(_myAge). Click on the "revertError" contract in the left-hand sidebar, and then click on the "requireError" function, pass in the arguement. Finally, click on the "transact" button to execute the function and retrieve the response message.
-
-## Authors
-Ifeoluwa Sanni
-
-## Loom(video) walkthrough
-```bash
-https://www.loom.com/share/a017f4d200a0413d83b883e68bf93c14?sid=dfe253d5-220b-4421-80e8-83b53a446e89
-```
-## License
-
-This project is licensed under the MIT License
