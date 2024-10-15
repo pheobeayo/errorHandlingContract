@@ -1,4 +1,4 @@
-# FunctionsAndErrorsProject
+# ErrorHandlingContract
 
 This Solidity implements the require(), assert() and revert() statements.
 
