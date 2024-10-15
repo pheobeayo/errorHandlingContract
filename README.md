@@ -1,10 +1,10 @@
 # FunctionsAndErrorsProject
 
-This Solidity implements the require(), assert() and revert() statements..
+This Solidity implements the require(), assert() and revert() statements.
 
 ## Description
 
-This program is a simple contract written in Solidity. The contract has 3 function that returns that implements the require(), assert() and revert() statements.
+This program is a simple contract written in Solidity. The contract has 2 functions that implement the require(), assert() and revert() statements.
 
 ## Getting Started
 
@@ -91,16 +91,16 @@ contract ErrorhandlingContract {
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0" (or another compatible version), and then click on the "Errorhandling.sol" button.
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Errorstatement" contract from the dropdown menu, and then click on the "Deploy" button.
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "ErrorHandling" contract from the dropdown menu, then click the "Deploy" button.
 
-Once the contract is deployed, you can interact with it by calling the requireError function or assertError function or revertError function, passing in their respective arguements(_myAge). Click on the "revertError" contract in the left-hand sidebar, and then click on the "requireError" function, pass in the arguement. Finally, click on the "transact" button to execute the function and retrieve the response message.
+Once the contract is deployed, you can interact with it by calling the deposit and withdraw functions that has the assertFunction or rewuireError function or revertError function, passing in their respective arguements(deposit and withraw). Click on the "revertError" contract in the left-hand sidebar, and then click on the "requireError" function, and pass in the arguement. Finally, click on the "transact" button to execute the function and retrieve the response message.
 
 ## Authors
 Ifeoluwa Sanni
 
 ## Loom(video) walkthrough
 ```bash
-https://www.loom.com/share/6bd744da2c154a2fbefb394678fa2651?sid=9e336d8e-7467-4860-a16f-619908202fc0
+https://www.loom.com/share/1d8c5f4d9ea248218d9fb4b90b46f4ac?sid=22dd0bfb-a8c9-450d-b987-defffb06b7d0
 ```
 ## License
 
